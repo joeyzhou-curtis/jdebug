@@ -1,7 +1,7 @@
 import groovy.time.*
 import groovy.json.*
 import net.sf.json.*
-jenkins_script_dir = "src/jenkins_script"
+jenkins_script_dir = "src/jenkins_scripts"
 config_dir = "${jenkins_script_dir}/config"
 
 def pre_pipeline() {
