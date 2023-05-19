@@ -7,9 +7,9 @@ ALL_USER_NAME="Baka.Nocerino"
 timestamps {
   wrap([$class: 'AnsiColorBuildWrapper']) {
     try {
-      UTIL = load("src/jenkins_script/util.groovy")
+      UTIL = load("src/jenkins_scripts/util.groovy")
       UTIL.init()
-      STAGE = load("src/jenkins_script/stage.groovy")
+      STAGE = load("src/jenkins_scripts/stage.groovy")
     } catch (java.lang.Throwable error) {
       println "exception caught:"
       println error.getMessage()
