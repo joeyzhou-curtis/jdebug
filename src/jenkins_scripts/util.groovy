@@ -8,9 +8,10 @@ def pre_pipeline() {
   echo "Start pre_pipeline()"  
   TEST_CONFIG = readJSON file: "${config_dir}/test_config.json"
   println "TEST_CONFIG['special_test_check']['owner']" + TEST_CONFIG['special_test_check']['owner']
-  owner =  TEST_CONFIG['special_test_check']['owner'].join(',')
+  owner =  TEST_CONFIG['special_test_check']['owner'].join(',').replaceAll('"', '')
   println "owner in TEST_CONFIG: ${owner}"
   ALL_USER_NAME = ALL_USER_NAME + ",${owner}"
+  println "ALL_USER_NAME in TEST_CONFIG: ${ALL_USER_NAME}"
 }
 
 def create_tmp_config() {
