@@ -10,6 +10,7 @@ def pre_pipeline() {
   println "TEST_CONFIG['special_test_check']['owner']" + TEST_CONFIG['special_test_check']['owner']
   owner =  TEST_CONFIG['special_test_check']['owner'].join(',')
   println "owner in TEST_CONFIG: ${owner}"
+  ALL_USER_NAME = ALL_USER_NAME + ",${owner}"
 }
 
 def create_tmp_config() {
