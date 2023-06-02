@@ -7,6 +7,7 @@ config_dir = "${jenkins_script_dir}/config"
 def pre_pipeline() {
   echo "Start pre_pipeline()"  
   TEST_CONFIG = readJSON file: "${config_dir}/test_config.json"
+  println "TEST_CONFIG['special_test_check']['owner']" + TEST_CONFIG['special_test_check']['owner']
   owner =  TEST_CONFIG['special_test_check']['owner'].join(',')
   println "owner in TEST_CONFIG: ${owner}"
 }
